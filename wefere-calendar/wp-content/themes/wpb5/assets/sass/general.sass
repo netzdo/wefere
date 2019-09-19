@@ -1,0 +1,239 @@
+$primary_color: #AA417A
+body
+  font-family: 'Quicksand', sans-serif
+img
+  max-width: 100%
+#mainHeader
+  position: relative
+  width: 100%
+  left: 0
+  top: 0
+  z-index: 1000
+  border-bottom: solid 1px #ccc
+  .container
+    position: relative
+    z-index: 1
+    @media(max-width:991px)
+      position: static
+  .navbar-collapse
+    @media(max-width:991px)
+      background: darken(#2b2b40,3)
+      position: absolute
+      left: 0
+      top: 100%
+      width: 100%
+      padding: 10px 30px
+      text-align: center
+  .navbar
+    @media(max-width:991px)
+      position: static
+    .navbar-brand
+      font-size: 16px
+      line-height: 1
+      font-weight: 700
+      color: #2b2b2b
+      img
+        width: 50px
+        margin-right: 5px
+    .navbar-toggler
+      box-shadow: none !important
+      outline: none !important
+      transition: .3s ease-out
+      padding: 0
+      &:not(.collapsed)
+        transform: translateX(10px)
+        span
+          &:first-child
+            transform: rotate(45deg) translateX(-5px)
+          &:nth-child(2)
+            opacity: 0
+          &:last-child
+            transform: rotate(-45deg) translateX(-4px)
+      span
+        display: block
+        width: 30px
+        height: 2px
+        background: #fff
+        transition: .3s ease-out
+        &:first-child
+          transform-origin: left top
+        &:last-child
+          transform-origin: left bottom
+        &+span
+          margin: 5px 0 0
+    .navbar-nav
+      .nav-item
+        .nav-link
+          color: #2b2b2b
+          text-transform: uppercase
+          font-weight: 600
+#mainFooter
+  background: #2b2b40
+  padding: 45px 0 0
+  font-size: 15px
+  .widget-area
+    padding: 0 0 15px
+    .widget
+      margin: 0 0 20px
+      color: #fff
+      h4
+        font-weight: 600
+        font-size: 20px
+        margin: 0 0 15px
+      .c-link
+        display: block
+        color: #fff
+        margin: 0 0 10px
+        display: inline-block
+        text-decoration: none
+        &:after
+          content: ''
+          display: block
+          width: 0
+          height: 1px
+          background: #fff
+          transition: .3s ease-out
+        &:hover, &:focus
+          &:after
+            width: 100%
+      ul
+        list-style: none
+        padding: 0
+        margin: 0
+        &.social
+          display: flex
+          flex-wrap: wrap
+          align-items: center
+          justify-content: flex-start
+          font-size: 20px
+          margin-top: 20px
+          li
+            margin: 0
+            &+li
+              margin-left: 20px
+            a
+              text-decoration: none
+              transition: .3s ease-out
+              &:after
+                display: none
+              &:hover, &:focus
+                transform: scale(1.2)
+        li
+          margin: 0 0 5px
+          a
+            color: #fff
+            text-decoration: none
+            position: relative
+            display: inline-block
+            &:after
+              content: ''
+              display: block
+              width: 0
+              height: 1px
+              background: #fff
+              transition: .3s ease-out
+            &:hover, &:focus
+              &:after
+                width: 100%
+
+.page-content
+  padding: 50px 0 80px
+  h1
+    &.title
+      font-size: 24px
+      font-weight: 700
+      color: #2b2b2b
+      margin: 0 0 50px
+
+.nav-tabs
+  .nav-link
+    color: #2b2b40
+    font-weight: 700
+    &.active
+      color: $primary_color
+.tab-content
+  .tab-pane
+    padding-top: 30px
+    h3.title-2
+      font-size: 16px
+      font-weight: 700
+      margin: 0
+      background: $primary_color
+      color: #fff
+      border-top-left-radius: 5px
+      border-top-right-radius: 5px
+      padding: 10px 30px
+      i
+        margin-right: 10px
+    ul
+      list-style: none
+      padding: 0
+      margin: 0 0 30px
+      font-size: 16px
+      border: solid 1px #ebebeb
+      padding: 20px 30px
+      li
+        margin: 0 0 10px
+#message
+  background: #fff
+  color: $primary_color
+  padding: 10px 15px
+  margin: 0 0 15px
+  border-radius: 4px
+  border: solid 2px $primary_color
+  p
+    margin: 0
+    font-weight: 700
+.acf-actions
+  a
+    color: $primary_color
+    text-decoration: none
+    font-weight: 700
+    transition: .3s ease-out
+    &:hover, &:focus
+      color: lighten($primary_color, 5)
+.acf-button, .btn
+  &.button-primary, &.btn-primary
+    background: $primary_color
+    color: #fff
+    border: none
+    padding: 10px 15px
+    font-size: 13px
+    border-radius: 4px
+    font-weight: 700
+    transition: .3s ease-out
+    &:hover, &:focus
+      background: lighten($primary_color, 5)
+      color: #fff
+.acf-form-submit
+  .acf-button
+    &.button-primary
+      font-size: 16px
+#day
+  font-size: 18px
+  font-weight: 700
+  margin: 0 0 30px
+
+.front-banner
+  height: 400px
+
+.login-form
+  border: solid 1px #ebebeb
+  border-radius: 4px
+  padding: 20px 30px
+  input[type="text"], input[type="password"]
+    width: 100%
+    height: 40px
+    border: solid 1px #ebebeb
+  input[type="submit"]
+    background: $primary_color
+    color: #fff
+    border: none
+    padding: 10px 15px
+    font-size: 13px
+    border-radius: 4px
+    font-weight: 700
+    transition: .3s ease-out
+    &:hover, &:focus
+      background: lighten($primary_color, 5)
+      color: #fff
