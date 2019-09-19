@@ -1,0 +1,29 @@
+1.- Colocar los archivos en un servidor PHP (XAMPP ; LAMPP ; MAMP)
+2.- Dentro de la carpeta wefere calendar esta una base de datos llamada wefere imortar en una base de datos (local o de servidor)
+3.- editar el archivo wp-config.php
+Definir el nombre de la base de datos
+define( 'DB_NAME', 'wefere' );
+Definir el nombre de usuario de la base de datos
+define( 'DB_USER', 'root' );
+Definir la contraseña de la base de datos
+define( 'DB_PASSWORD', '' );
+
+Definir la direccion base de la app
+
+define( 'WP_HOME', 'http://example.com' );
+define( 'WP_SITEURL', 'http://example.com' );
+
+**Estas lineas se tienen que agregar preferentemente despues de define('FS_METHOD', 'direct');
+  y la direccion en caso de ser servidor local seria http://localhost/wefere-calendar
+
+  y en teoria con esto la app localmente deberia correr
+
+  el usuario principal es
+  wefere_adm
+  y la contraseña : azul32Naranja
+
+
+  en caso de no se una app local, se tendria que cambiar las claves de Authentication de google en
+  /wp-admin/admin.php?page=general
+
+  
